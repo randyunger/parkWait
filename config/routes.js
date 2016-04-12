@@ -47,6 +47,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   , '/hi': 'DisController.hi'
-  , '/times': 'DisController.times'
+  , '/times/:parkName': 'DisController.times'
+  , '/allTimes/:parkName': 'DisController.allTimes'
 
 };

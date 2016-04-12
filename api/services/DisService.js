@@ -1,12 +1,27 @@
 module.exports = {
 
-  getTimes: function (parkName){
+  sortByWaitTime: function (waitTimes){
+    var op = waitTimes.sort(function(rideA, rideB){
+      return rideA.waitTime - rideB.waitTime;
+    });
+    return op;
+  }
+
+  ,filterByOpen: function (waitTimes){
+    var op = waitTimes.filter(function(ride){
+      if(ride.status === "Operating") return true;
+      else return false;
+    });
+    return op;
+  }
+
+  ,getTimes: function (parkName){
     if(parkName == "mk") return mkTimes;
     else return caTimes;
   }
 
   ,fetchTimes: function (parkName) {
-    console.log("Fetching times for ${parkName}");
+    console.log("Fetching times for " + parkName);
     var parkApi;
     if(parkName == "mk") parkApi = mk;
     else parkApi = ca;
