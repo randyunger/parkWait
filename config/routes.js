@@ -46,6 +46,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  , '/hi': 'DisController.hi' 
+  , '/hi': 'DisController.hi'
+  , '/times': 'DisController.times'
 
 };
