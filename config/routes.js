@@ -35,6 +35,7 @@ module.exports.routes = {
   '/old': {
     view: 'homepage'
   }
+  ,'/favicon.ico': 'favicon.ico'
 
   /***************************************************************************
   *                                                                          *
@@ -49,6 +50,7 @@ module.exports.routes = {
   , '/api/hi': 'DisController.hi'
   , '/api/times/:parkName': 'DisController.times'
   , '/api/allTimes/:parkName': 'DisController.allTimes'
+  , '/api/p': 'DisController.p'
 
   ,'/:parkName': 'DisController.timesForPark'
 
