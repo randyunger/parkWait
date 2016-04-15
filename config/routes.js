@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
+  '/old': {
     view: 'homepage'
   }
 
@@ -46,8 +46,10 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  , '/hi': 'DisController.hi'
-  , '/times/:parkName': 'DisController.times'
-  , '/allTimes/:parkName': 'DisController.allTimes'
+  , '/api/hi': 'DisController.hi'
+  , '/api/times/:parkName': 'DisController.times'
+  , '/api/allTimes/:parkName': 'DisController.allTimes'
+
+  ,'/:parkName': 'DisController.timesForPark'
 
 };

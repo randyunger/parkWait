@@ -20,6 +20,20 @@ module.exports = {
     else return caTimes;
   }
 
+  , kickoff: function(timeout) {
+    var mk = function(){
+      DisService.fetchTimes("mk");
+      setTimeout(mk, timeout)
+    }
+
+    var ca = function(){
+      DisService.fetchTimes("ca")
+      setTimeout(ca, timeout)
+    }
+    mk()
+    ca()
+  }
+
   ,fetchTimes: function (parkName) {
     console.log("Fetching times for " + parkName);
     var parkApi;

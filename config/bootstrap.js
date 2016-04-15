@@ -11,8 +11,8 @@
 
 module.exports.bootstrap = function(cb) {
 
-  setTimeout(DisService.fetchTimes("mk"), 1000 * 60);
-  setTimeout(DisService.fetchTimes("ca"), 1000 * 60);
+  DisService.kickoff(60 * 1000)
+
 
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)

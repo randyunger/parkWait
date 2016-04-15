@@ -1,0 +1,29 @@
+<h1><%= title %></h1>
+<div>
+
+  <table class="sortable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Wait</th>
+        <th>FastPass?</th>
+      </tr>
+    </thead>
+  <% for(var i=0; i<timeData.length-1 ; i++) {%>
+    <tr>
+      <td><%= timeData[i].name %></td>
+      <td><%= timeData[i].waitTime %></td>
+      <td><% if(timeData[i].fastPass) { %>
+        yes
+        <%} else { %>
+        no
+        <%} %></td>
+    </tr>
+  <%}%>
+  </table>
+</div>
+
+<script>
+  //window.d = eval( <%= JSON.stringify(timeData )%>)
+</script>
+<script src="sorttable.js"></script>
