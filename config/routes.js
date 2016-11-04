@@ -36,6 +36,11 @@ module.exports.routes = {
     view: 'homepage'
   }
   ,'/favicon.ico': 'favicon.ico'
+///////////////////////////
+
+  ,'/classify': 'ClarifaiController.classify'
+
+///////////////////////////
 
   /***************************************************************************
   *                                                                          *
