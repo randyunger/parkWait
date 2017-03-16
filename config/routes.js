@@ -38,7 +38,7 @@ module.exports.routes = {
   ,'/favicon.ico': 'favicon.ico'
 ///////////////////////////
 
-  ,'/classify': 'ClarifaiController.classify'
+  //,'/classify': 'ClarifaiController.classify'
 
 ///////////////////////////
 

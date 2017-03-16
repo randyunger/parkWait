@@ -25,5 +25,8 @@ module.exports.log = {
   ***************************************************************************/
 
   // level: 'info'
+  level: 'info',
+  maxSize: 1000,
+  filePath: "log.txt"
 
 };
