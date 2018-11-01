@@ -30,7 +30,7 @@ module.exports = {
   timesForPark: function (req, res) {
     var parkName = req.param("parkName", "mk");
     if(parkName == "favicon.ico")
-        return res.send("favicon.ico")
+        return res.send("favicon.ico");
     var showAllParam = req.param("a", "TRUE");
     console.log(req.allParams());
     console.log(showAllParam);
@@ -40,12 +40,15 @@ module.exports = {
     var onlyOpen = DisService.filterByOpen(allTimes);
     var byWaitTime = DisService.sortByWaitTime(onlyOpen);
     // console.log(times);
-    var dataSource = byWaitTime
+    var dataSource = byWaitTime;
     if(showAll) {
       dataSource = allTimes
     }
     return res.view("timesForPark", {title: parkName + " wait times", timeData: dataSource});
-  }
+  },
 
+  index: function (req, res) {
+    return res.view("index", {title: ""});
+  }
 
 };

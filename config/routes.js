@@ -58,5 +58,6 @@ module.exports.routes = {
   , '/api/p': 'DisController.p'
 
   ,'/:parkName': 'DisController.timesForPark'
+  ,'/': 'DisController.index'
 
 };
